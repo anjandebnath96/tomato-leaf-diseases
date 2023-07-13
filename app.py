@@ -19,6 +19,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from oauth2client.service_account import ServiceAccountCredentials
 from io import BytesIO
+from googleapiclient.http import MediaIoBaseUpload
 
 @st.cache(allow_output_mutation=True)
 def load_model():
