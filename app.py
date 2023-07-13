@@ -47,6 +47,18 @@ if file is None:
     st.text("No tomato leaf image is selected\nকোনো টমেটো পাতার ছবি নির্বাচন করা হয়নি")
 else:
 
+    credentials = service_account.Credentials.from_service_account_file(
+        SERVICE_ACCOUNT_FILE, scopes=SCOPES
+    )
+    drive_service = build('drive', 'v3', credentials=credentials)
+
+    # Upload the file to Google Drive
+    file_metadata = {'name': file.name, 'parents': ['1ps9JTqK1N1HXVRdmQnLoeKVP1Dam4JuK']}
+    media = MediaIoBaseUpload(BytesIO(file.read()), mimetype=file.type)
+    response = drive_service.files().create(
+        body=file_metadata, media_body=media, fields='id'
+    ).execute()
+
 
   
     image = Image.open(file)
@@ -147,17 +159,5 @@ else:
         st.text("\n\nTo maintain healthy tomato plants : \n1.Provide adequate sunlight, water, and nutrient-rich soil.\n2.Monitor plants regularly for signs of pests, diseases, or nutrient deficiencies.\n3.Prune tomato plants to promote air circulation and remove diseased or damaged foliage.\n4.Practice proper watering techniques, avoiding both under and overwatering.")
         st.text("\n\nসুস্থ টমেটো গাছ বজায় রাখতে :\n১.পর্যাপ্ত সূর্যালোক, জল, এবং পুষ্টি সমৃদ্ধ মাটি প্রদান করুন।\n২.কীটপতঙ্গ, রোগ বা পুষ্টির ঘাটতির লক্ষণগুলির জন্য নিয়মিত গাছগুলি পর্যবেক্ষণ করুন।\n৩.বায়ু সঞ্চালন বাড়াতে এবং রোগাক্রান্ত বা ক্ষতিগ্রস্ত পাতা অপসারণ করতে টমেটো গাছ ছাঁটাই করুন।\n৪.সঠিক জল দেওয়ার কৌশলগুলি অনুশীলন করুন, জলের নীচে এবং অতিরিক্ত জল উভয়ই এড়িয়ে চলুন।\n")
       
-    credentials = service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE, scopes=SCOPES
-    )
-    drive_service = build('drive', 'v3', credentials=credentials)
-
-    # Upload the file to Google Drive
-    file_metadata = {'name': file.name, 'parents': ['1ps9JTqK1N1HXVRdmQnLoeKVP1Dam4JuK']}
-    media = MediaIoBaseUpload(BytesIO(file.read()), mimetype=file.type)
-    response = drive_service.files().create(
-        body=file_metadata, media_body=media, fields='id'
-    ).execute()
-
 
 
