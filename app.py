@@ -34,7 +34,7 @@ st.write("<h1 style='text-align: center; background-color: #ebccff; color: #9900
 st.write("<h1 style='text-align: center; background-color: #ebccff; color: #5c0099;'>টমেটো পাতার রোগ নির্ণয়</h1>", unsafe_allow_html=True)
 
 
-file = st.file_uploader("Please upload an Tomato leaf image file. / একটি টমেটো পাতার ছবি আপলোড করুন", type=["jpg", "png"])
+file = st.file_uploader("Please upload an Tomato leaf image file. / একটি টমেটো পাতার ছবি আপলোড করুন", type=["jpg", "png", "jpeg"])
 
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
