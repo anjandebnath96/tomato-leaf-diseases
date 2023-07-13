@@ -1,0 +1,14 @@
+streamlit
+tensorflow
+numpy
+pandas
+keras
+scikit-learn
+matplotlib
+opencv-python
+Pillow
+opencv-python-headless
+google-auth
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
