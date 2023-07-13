@@ -1,1 +1,13 @@
-{"web":{"client_id":"950420484671-gdktrd786nh3cv11e945grspju8e66sc.apps.googleusercontent.com","project_id":"tomato-392714","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","redirect_uris":["https://tomato-leaf-diseases-detection-anjan.streamlit.app/"]}}
+{
+  "type": "service_account",
+  "project_id": "tomato-392714",
+  "private_key_id": "19ddd7b5bfc5c8957bbf208a985be45aa8a56d64",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDKGTgQkSWStyRw\nPIAYRxpJ4ZrMW0chnmMgJw8x+vSp+XpVf64mhcCFYcl3ruiASQdWMraq5lViqN0y\nCMlI/e6B32cmx71Ojyf9rbnAYhQVpqqzi0U53NR5i1NtOl0Oq08wQg/t4PbaUnhn\n/Hj0LBzp3Zh1ze6Q1+6MW2m0cToWTevNMtxmJqTmZls0fusym021K10spnM9MX+B\n9x+jjXWWQ3l1kK2aaTg6LxumoPDmpgWFU2J8d2ryLZPSNe1bCPKAUYKV9LdvNrig\nGp+E2WXoNZcs3/8aFDG1WI8yKrV7rs96mPDzswoj0uXt1T/VWbJAwv3OGbFdJFq1\nildTyOUXAgMBAAECggEAL2cy60/gTEWA2oKWWRt0YxfzwzM1wADypzwCKGsAsE3A\nEAXex1JgEekZ5GS2TEDU47cJeZSFOpr5Jx9Ad0p4gyXvf/0hvid97dat1x4qL9nj\n+DEWj7fobonri5dA9IviCyOzsMwvmo31iA6EIGGodoJvnFItPvQnE+ztIlHcmhZJ\nvIx6vYlB0a1mCF1gWbRdrjKMBj5bi0LqwCLBxGwH3OdYLYeBsd4xtN0hGUTTzCg3\nC+Gwi0I+XTkYMFmMTRIIRfn3kWROlgl4m5dc7yn7943jhX9+jnhFRApsws0AehLy\nFAZ7eF1EwvBNhen72FvdEHIBcngjmyebfIT2m41+YQKBgQD3xaOOQufuS3hy/X9Z\nBk+/35UjU3GdvtKbp78+Q6QCp7bWGLwqyGdu1CYuZm56dh/fx4o2iiUB1s8FzwA2\nTMlhDhFJ/0rOG3KIMHJGf0jdO8bsa6n8kOAnxdVjihe/e6zhbadLpMQppOZiZQAy\n/8X6S6tkJ29mPKk6Z3kcm3cllQKBgQDQz0zV7mtsJdV23741yznHNqP6aw2AZlkx\nvZ2Rt50JiC0HNBE1uW2TheVjc6h8ayDF8qpjfMRtgyn456tHbrvqT1/FSg8Zc1c6\n8Y5+FYDk17NtvvZkXDD6m+qLBzyseQ5RUtA2rj8P7AVadoV7pFqKHxMsD+PQXi3g\nODXQuj/c+wKBgFTBJIt7U37uDgu3ryIyyIDn6EonNwwwxDY+kWqpFKdb220tFODF\noKwGofDpVQ1K7uhLh3nUk4gnhLWF85qfdZtfhoZ7b4lFVk5D1DNNQw16bzdcNM+S\ndzrjr3TXPfxgP+j0628ys29TWwN5bTIE0CIoVD50RuUABxtVXdZtT7ppAoGASQEB\nKxaFZjVAEaSeOu6Hj9fRst60xLyD2LkjmuuoMsnyfD8++RqQbfB1R7ULJhzKQ4rY\n+ZmIj4U5KnXM01eqyXvgzvhamRpTWB9WI0zfWKL1b5xBRstYsHXMpbjtBJv6XoJm\nm4eGMsnhAUTI3HaU1Q+SQ2h2zMXwoiDk58oGQ/sCgYBuAJPVLQKBU7D35Ui7gdGx\nltyKAJ8l8pRANy2RanK70mTkEuQI2AaWk641phoFf8szihkjv6YX4ZIoGpbKPTTq\nhu9e75f5R80+DrDfbMn6hq+7RPeHrRiM3e4+UIh+DgF3gRGstvSGKZ5XUzjuJT6M\n5W54E4UE5sIuGP1f8wTZ4g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "tomato@tomato-392714.iam.gserviceaccount.com",
+  "client_id": "113939701167941651999",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tomato%40tomato-392714.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
