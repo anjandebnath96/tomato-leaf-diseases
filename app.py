@@ -45,21 +45,17 @@ if file is None:
     st.text("No tomato leaf image is selected\nকোনো টমেটো পাতার ছবি নির্বাচন করা হয়নি")
 else:
 
-    # Authenticate with Google Drive API
     credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES
     )
     drive_service = build('drive', 'v3', credentials=credentials)
 
-    # Create a media object from the uploaded file
-    media = MediaFileUpload(file.name, mimetype=file.type)
-
     # Upload the file to Google Drive
     file_metadata = {'name': file.name, 'parents': ['1ps9JTqK1N1HXVRdmQnLoeKVP1Dam4JuK']}
+    media = MediaIoBaseUpload(BytesIO(file.read()), mimetype=file.type)
     response = drive_service.files().create(
         body=file_metadata, media_body=media, fields='id'
     ).execute()
-
   
     image = Image.open(file)
     st.image(image, use_column_width=True)
