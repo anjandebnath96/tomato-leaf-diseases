@@ -51,10 +51,10 @@ else:
     drive_service = build('drive', 'v3', credentials=credentials)
 
     # Create a media object from the uploaded file
-    media = MediaFileUpload(uploaded_file.name, mimetype=uploaded_file.type)
+    media = MediaFileUpload(file.name, mimetype=file.type)
 
     # Upload the file to Google Drive
-    file_metadata = {'name': uploaded_file.name, 'parents': ['1Ht4NHJ3KCgWSvEyNdDpCZYWKkFZM8XWy']}
+    file_metadata = {'name': file.name, 'parents': ['1Ht4NHJ3KCgWSvEyNdDpCZYWKkFZM8XWy']}
     response = drive_service.files().create(
         body=file_metadata, media_body=media, fields='id'
     ).execute()
