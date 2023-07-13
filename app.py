@@ -27,8 +27,8 @@ with st.spinner('Model is being loaded..'):
   model=load_model()
 
 
-SCOPES = ['https://www.googleapis.com/auth/drive.file']
-SERVICE_ACCOUNT_FILE = 'file.json'
+SCOPES  = ['https://www.googleapis.com/auth/drive.file']
+SERVICE_ACCOUNT_FILE  = 'file.json'
 
 st.write("<h1 style='text-align: center; background-color: #ebccff; color: #990033;'>Tomato Leaf Diseases Detection</h1>", unsafe_allow_html=True)
 st.write("<h1 style='text-align: center; background-color: #ebccff; color: #5c0099;'>টমেটো পাতার রোগ নির্ণয়</h1>", unsafe_allow_html=True)
@@ -45,6 +45,7 @@ if file is None:
     st.text("No tomato leaf image is selected\nকোনো টমেটো পাতার ছবি নির্বাচন করা হয়নি")
 else:
 
+    # Authenticate with Google Drive API
     credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES
     )
@@ -54,7 +55,7 @@ else:
     media = MediaFileUpload(file.name, mimetype=file.type)
 
     # Upload the file to Google Drive
-    file_metadata = {'name': file.name, 'parents': ['1Ht4NHJ3KCgWSvEyNdDpCZYWKkFZM8XWy']}
+    file_metadata = {'name': file.name, 'parents': ['1ps9JTqK1N1HXVRdmQnLoeKVP1Dam4JuK']}
     response = drive_service.files().create(
         body=file_metadata, media_body=media, fields='id'
     ).execute()
