@@ -17,6 +17,7 @@ from PIL import Image, ImageOps
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
+from oauth2client.service_account import ServiceAccountCredentials
 
 @st.cache(allow_output_mutation=True)
 def load_model():
@@ -29,8 +30,10 @@ with st.spinner('Model is being loaded..'):
 
 json_file_path = 'file.json'
 credentials = service_account.Credentials.from_service_account_file(json_file_path, scopes=['https://www.googleapis.com/auth/drive'])
-# Build the Google Drive API client
-drive_service = build('drive', 'v3', credentials=credentials)
+project_id = 'tomato-392714'
+
+# Create a service client
+service = build('drive', 'v3', credentials=credentials)
 
 
 st.write("<h1 style='text-align: center; background-color: #ebccff; color: #990033;'>Tomato Leaf Diseases Detection</h1>", unsafe_allow_html=True)
@@ -48,14 +51,15 @@ if file is None:
     st.text("No tomato leaf image is selected\nকোনো টমেটো পাতার ছবি নির্বাচন করা হয়নি")
 else:
 
+    media = MediaFileUpload(file.name, mimetype=file.type)
     file_metadata = {
         'name': file.name,
         'parents': ['1Ht4NHJ3KCgWSvEyNdDpCZYWKkFZM8XWy']  # Replace with the ID of the folder where you want to save the file
     }
-    media = MediaFileUpload(file, mimetype=file.type)
+
 
     # Upload the file
-    uploaded_file = drive_service.files().create(
+    response = service.files().create(
         body=file_metadata,
         media_body=media,
         fields='id'
